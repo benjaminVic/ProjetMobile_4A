@@ -1,14 +1,25 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      SandwitchGen
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+  <ion-list inset>
+    <ion-item *ngFor="let sandwitch of sandwitches">
+      <h2>{{sandwitch.label}} - {{sandwitch.price/100}} €</h2>
+    </ion-item>
+  </ion-list>
+  <ion-list inset>
+    <ion-item>
+      <h2>{{boisson.label}} - {{boisson.price/100}} €</h2>
+    </ion-item>
+  </ion-list>
+  <ion-list inset>
+    <ion-item *ngFor="let dessert of desserts">
+      <h2>{{dessert.label}} - {{dessert.price/100}} €</h2>
+    </ion-item>
+  </ion-list>
 </ion-content>
